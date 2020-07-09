@@ -1,9 +1,7 @@
-package dto;
+package com.miron.ru.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 @Builder

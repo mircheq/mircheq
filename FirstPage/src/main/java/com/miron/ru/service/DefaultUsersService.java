@@ -1,13 +1,11 @@
-package service;
+package com.miron.ru.service;
 
-import dto.UsersDto;
-import entity.Users;
-import exception.ValidationException;
-import lombok.AllArgsConstructor;
-import org.apache.catalina.User;
-import org.springframework.context.annotation.Bean;
+import com.miron.ru.dto.UsersDto;
+import com.miron.ru.entity.Users;
+import com.miron.ru.exception.ValidationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.UsersRepository;
+import com.miron.ru.repository.UsersRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,11 +13,13 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 
 @Service
-@AllArgsConstructor
 public class DefaultUsersService implements UsersService {
 
-    private final UsersRepository usersRepository;
-    private final UsersConverter usersConverter;
+    @Autowired
+    private UsersRepository usersRepository;
+
+    @Autowired
+    private UsersConverter usersConverter;
 
     @Override
     public UsersDto saveUser(UsersDto usersDto) throws ValidationException {

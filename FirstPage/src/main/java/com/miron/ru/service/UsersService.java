@@ -1,7 +1,7 @@
-package service;
+package com.miron.ru.service;
 
-import dto.UsersDto;
-import exception.ValidationException;
+import com.miron.ru.dto.UsersDto;
+import com.miron.ru.exception.ValidationException;
 
 import java.util.List;
 

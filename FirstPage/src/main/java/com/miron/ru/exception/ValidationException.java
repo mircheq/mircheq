@@ -1,4 +1,4 @@
-package exception;
+package com.miron.ru.exception;
 
 public class ValidationException extends Exception {
 

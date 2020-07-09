@@ -1,8 +1,7 @@
-package service;
+package com.miron.ru.service;
 
-import dto.UsersDto;
-import entity.Users;
-import org.springframework.context.annotation.Bean;
+import com.miron.ru.dto.UsersDto;
+import com.miron.ru.entity.Users;
 import org.springframework.stereotype.Component;
 
 @Component

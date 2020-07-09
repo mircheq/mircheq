@@ -1,6 +1,6 @@
-package repository;
+package com.miron.ru.repository;
 
-import entity.Users;
+import com.miron.ru.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsersRepository extends JpaRepository<Users, Integer> {

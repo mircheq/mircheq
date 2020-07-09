@@ -1,24 +1,23 @@
-package Controller;
+package com.miron.ru.Controller;
 
-import dto.UsersDto;
-import exception.ValidationException;
-import lombok.AllArgsConstructor;
+import com.miron.ru.dto.UsersDto;
+import com.miron.ru.exception.ValidationException;
 import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.DefaultUsersService;
-import service.UsersService;
+import com.miron.ru.service.UsersService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@AllArgsConstructor
 @Log
 @CrossOrigin
 public class UsersController {
 
-    private final UsersService usersService;
+    @Autowired
+    private UsersService usersService;
 
     @PostMapping("/save")
     public UsersDto saveUsers(@RequestBody UsersDto usersDto) throws ValidationException {
